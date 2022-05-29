@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GoL"
+        xmlns:vm="clr-namespace:GoL.ViewModels"
         mc:Ignorable="d"
         Title="MainWindow" 
         Height="620" 
@@ -13,7 +14,37 @@
         ResizeMode="NoResize"
         AllowsTransparency="True"
         Background="Transparent">
+    
+    <Window.DataContext>
+        <vm:MainWindowViewModel/>
+    </Window.DataContext>
 
+    <Window.Resources>
+        
+       <!--Стиль кнопок-->
+        
+        <Style TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="17"
+                                
+                                Background="{TemplateBinding Background}"
+                                BorderThickness="3"
+                                BorderBrush="LightBlue">
+
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
+        
+    </Window.Resources>
+    
+    <!--Интерфейс-->
     <Grid>
 
         <Border Height="620"
@@ -394,9 +425,13 @@
                 <StackPanel Grid.Row="0"
                             Grid.Column="1">
 
-                    <Label x:Name="CloseApp"
+                    <Button x:Name="CloseApp"
+                            
+                           Command="{Binding CloseApplicationCommand}"
                            Content="X"
                            Foreground="Red"
+                           Background="White"
+                           
                            HorizontalAlignment="Right"
                            VerticalAlignment="Top"
                            Margin="0,15,21,0"
