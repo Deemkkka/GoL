@@ -27,7 +27,7 @@
 
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="120"/>
+                <RowDefinition Height="160"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
@@ -50,6 +50,7 @@
 
                 <Grid.RowDefinitions>
                     <RowDefinition Height="45"/>
+                    <RowDefinition Height="70"/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
 
@@ -112,6 +113,20 @@
                              />
 
                 </StackPanel>
+
+                <StackPanel Grid.Row="2"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2">
+
+                    <Button x:Name="BtnApplySizeField"
+                            Content="Применить"
+                            Height="30"
+                            Width="100"
+                            Margin="0, 5, 0 , 0"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Top"/>
+
+                </StackPanel>
                     
             </Grid>
 
@@ -126,7 +141,9 @@
 
                 <Grid.RowDefinitions>
                     <RowDefinition Height="45"/>
+                    <RowDefinition Height="70"/>
                     <RowDefinition/>
+                    
                 </Grid.RowDefinitions>
 
                 <StackPanel Grid.Row="0" 
@@ -161,6 +178,8 @@
                                Margin="0, 10, 0, 0"/>
 
                 </StackPanel>
+                
+                
 
                 <StackPanel Grid.Row="1"
                             Grid.Column="1">
@@ -188,6 +207,21 @@
                              />
 
                 </StackPanel>
+
+                <StackPanel Grid.Row="2"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2">
+
+                    <Button x:Name="BtnApplySizePoint"
+                            Content="Применить"
+                            Height="30"
+                            Width="100"
+                            Margin="0, 5, 0 , 0"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Top"/>
+
+                </StackPanel>
+
 
             </Grid>
 
@@ -380,7 +414,7 @@
                         Grid.ColumnSpan="5">
                 <Grid>
                 
-                <Border Height="498"
+                <Border Height="458"
                         Width="960"
                         VerticalAlignment="Bottom"
                         HorizontalAlignment="Center"
